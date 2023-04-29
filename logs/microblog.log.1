@@ -1,0 +1,85 @@
+2023-04-25 22:08:12,908 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-26 12:55:41,423 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-26 15:50:00,618 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-26 15:50:59,608 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-26 15:51:09,861 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-26 15:52:23,761 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-26 15:52:30,369 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-26 15:52:36,612 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-26 15:52:56,009 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-26 15:53:02,519 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-26 15:53:06,526 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-26 16:18:59,753 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-26 16:22:44,232 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-26 16:24:21,425 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-29 10:04:08,349 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-29 10:08:20,999 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-29 10:15:26,784 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-29 10:15:45,465 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-29 10:41:01,334 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-29 10:41:34,624 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-29 10:50:22,517 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-29 11:16:16,573 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-29 11:17:20,299 INFO: Microblog startup [in /home/matthew/Desktop/mega_flask_tutorial/app/__init__.py:43]
+2023-04-29 11:17:39,353 ERROR: Exception on /user/lagiacrus [GET] [in /home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/matthew/Desktop/mega_flask_tutorial/app/routes.py", line 78, in user
+    return render_template('user.html', user=user, posts=posts, form=form)
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/matthew/Desktop/mega_flask_tutorial/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/matthew/Desktop/mega_flask_tutorial/app/templates/base.html", line 35, in top-level template code
+    {% block content%} {% endblock %}
+  File "/home/matthew/Desktop/mega_flask_tutorial/app/templates/user.html", line 26, in block 'content'
+    <form action="{{ url_for('unfollow', username_user.username) }}" method="post">
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'username_user' is undefined
+2023-04-29 11:32:01,380 ERROR: Exception on /user/lagiacrus [GET] [in /home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/matthew/Desktop/mega_flask_tutorial/app/routes.py", line 78, in user
+    return render_template('user.html', user=user, posts=posts, form=form)
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/matthew/Desktop/mega_flask_tutorial/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/matthew/Desktop/mega_flask_tutorial/app/templates/base.html", line 35, in top-level template code
+    {% block content%} {% endblock %}
+  File "/home/matthew/Desktop/mega_flask_tutorial/app/templates/user.html", line 26, in block 'content'
+    <form action="{{ url_for('unfollow', username_user.username) }}" method="post">
+  File "/home/matthew/Desktop/mega_flask_tutorial/venv/lib/python3.10/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'username_user' is undefined
